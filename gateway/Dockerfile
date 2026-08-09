@@ -8,7 +8,7 @@ COPY gateway/nginx.conf /etc/nginx/conf.d/default.conf
 # Статика лежит в frontend/build (это правильно, так как frontend лежит рядом с корнем)
 COPY frontend/build /staticfiles/
 
-# Скрипт тоже лежит в gateway/
+# Скрипт тоже лежит в gateway
 COPY gateway/wait-for-it.sh /wait-for-it.sh
 
 RUN chmod +x /wait-for-it.sh
