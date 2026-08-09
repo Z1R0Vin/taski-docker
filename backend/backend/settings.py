@@ -1,24 +1,13 @@
-<<<<<<< HEAD
 import os
-=======
->>>>>>> 35ea05f9fd099ff390aa8baa82dbc7de44ab7402
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
-
 
 SECRET_KEY = 'django-insecure-j_89af+30&&4qm*8z9_(^zz8p4-ho8z_m6ylm0s$h!-p@on1_^'
 
 DEBUG = True
 
-<<<<<<< HEAD
-ALLOWED_HOSTS = ['localhost', '123.123.123.123', 'myhostzirovin.ddns.net']
-=======
-ALLOWED_HOSTS = []
->>>>>>> 35ea05f9fd099ff390aa8baa82dbc7de44ab7402
-
-
-# Application definition
+ALLOWED_HOSTS = ['localhost', '123.123.123.123', 'myhostzirovin.ddns.net', '*']
 
 INSTALLED_APPS = [
     'api.apps.ApiConfig',
@@ -63,34 +52,16 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'backend.wsgi.application'
 
-
-# Database
-# https://docs.djangoproject.com/en/3.2/ref/settings/#databases
-
-<<<<<<< HEAD
-# Этими строчками замените текущую настройку DATABASES
 DATABASES = {
     'default': {
-        # Меняем настройку Django: теперь для работы будет использоваться
-        # бэкенд postgresql
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': os.getenv('POSTGRES_DB', 'django'),
         'USER': os.getenv('POSTGRES_USER', 'django'),
         'PASSWORD': os.getenv('POSTGRES_PASSWORD', ''),
         'HOST': os.getenv('DB_HOST', ''),
-        'PORT': os.getenv('DB_PORT', 5432)
-=======
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
->>>>>>> 35ea05f9fd099ff390aa8baa82dbc7de44ab7402
+        'PORT': os.getenv('DB_PORT', 5432),
     }
 }
-
-
-# Password validation
-# https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -107,10 +78,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
-# Internationalization
-# https://docs.djangoproject.com/en/3.2/topics/i18n/
-
 LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'UTC'
@@ -121,18 +88,8 @@ USE_L10N = True
 
 USE_TZ = True
 
-
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/3.2/howto/static-files/
-
 STATIC_URL = '/static/'
-<<<<<<< HEAD
 STATIC_ROOT = BASE_DIR / 'collected_static'
-=======
->>>>>>> 35ea05f9fd099ff390aa8baa82dbc7de44ab7402
-
-# Default primary key field type
-# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
