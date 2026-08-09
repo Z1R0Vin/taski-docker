@@ -145,7 +145,7 @@ jobs:
       - name: Push to DockerHub
         uses: docker/build-push-action@v4
         with:
-          context: ./gateway/
+          context: .               # <--- Главное исправление: контекст — корень проекта
+          file: ./gateway/Dockerfile # <--- Явно указываем, где лежит Dockerfile
           push: true
-          # Тут вместо username должен быть ваш логин на Docker Hub
           tags: z1r0vin/taski_gateway:latest
